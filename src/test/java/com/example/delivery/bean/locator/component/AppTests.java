@@ -1,4 +1,4 @@
-package com.example.delivery.bean.locator;
+package com.example.delivery.bean.locator.component;
 
 import com.example.delivery.bean.locator.component.Deliverer;
 import com.example.delivery.bean.locator.component.DelivererLocator;
@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 import static com.example.delivery.bean.locator.model.Log.log;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 class AppTests {
@@ -26,6 +27,8 @@ class AppTests {
         );
 
         var deliverer = delivererLocator.getDeliverer();
+
+        assertTrue(deliverer instanceof LogHttpDeliveryComponent);
 
         // pretend the loop is a kafka consumer and we are consuming messages
         for (var log : logs) {
