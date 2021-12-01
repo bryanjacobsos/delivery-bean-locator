@@ -1,11 +1,11 @@
 package com.example.delivery.bean.locator.model;
 
-public class Logs {
+public class Log {
 
     private String message;
 
-    public static Logs logs(String message) {
-        var logs = new Logs();
+    public static Log log(String message) {
+        var logs = new Log();
 
         logs.setMessage(message);
 
@@ -18,5 +18,12 @@ public class Logs {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    @Override
+    public String toString() {
+        return "Log{" +
+                "message='" + message + '\'' +
+                '}';
     }
 }

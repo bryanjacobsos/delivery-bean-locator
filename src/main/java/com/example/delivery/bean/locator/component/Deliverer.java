@@ -1,6 +1,6 @@
 package com.example.delivery.bean.locator.component;
 
-import com.example.delivery.bean.locator.model.Logs;
+import com.example.delivery.bean.locator.model.Log;
 
 /**
  * this is used to allow a polymorphic lookup of different delivery destinations
@@ -12,6 +12,6 @@ import com.example.delivery.bean.locator.model.Logs;
  */
 public interface Deliverer {
 
-    void deliver(Logs logs);
+    void deliver(Log log);
 
 }
